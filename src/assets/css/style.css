@@ -1,0 +1,56 @@
+  /* Add padding to the body to prevent content from being overlapped by the fixed navbar */
+  body {
+    font-family: Arial, sans-serif; /* Adjust font family as needed */
+   height: 100vh;
+  }
+/* Style for the cover container */
+.cover-container {
+
+ 
+}
+
+/* Style for the cover image */
+.cover-image {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Style for the cover text */
+.cover-text {
+  position: absolute;
+  top: 50%;
+  left:45%;
+  padding-top: 10%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ccd3c1;
+  z-index: 1; 
+}
+
+.cover-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.cover-text p {
+  font-size: 1.2em;
+  margin-right: auto;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .cover-text h1 {
+    font-size: 6vw; /* Adjusted font size for smaller screens */
+  }
+
+  .cover-text p {
+    font-size: 3vw; /* Adjusted font size for smaller screens */
+  }
+}
