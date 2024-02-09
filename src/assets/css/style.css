@@ -43,9 +43,53 @@ font-family: Arial, sans-serif; /* Adjust font family as needed */
   font-size: 1.2em;
   margin-right: auto;
 }
+/* Style for the navigation links */
+.navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar ul li {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+.navbar ul li .active {
+ text-decoration: underline;
+  text-decoration-color: rgb(102, 228, 6);
+}
+/* Change link color on hover */
+.navbar ul li a:hover {
+  background-color: rgba(234, 238, 232, 0.2); /* Semi-transparent white */
+  text-decoration: underline;
+  text-decoration-color: rgb(102, 228, 6);
+  ;
+}
+
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
+  .navbar ul li {
+  display: inline-block;
+  margin: 0px;
+  align-self:self-end;
+}
+
+.navbar ul li {
+  color: #fff;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Smooth color transition */
+  
+}
   .cover-text h1 {
     font-size: 6vw; /* Adjusted font size for smaller screens */
   }

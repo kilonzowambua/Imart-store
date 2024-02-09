@@ -1,8 +1,21 @@
-import "../assets/css/style.css";
+import React, { useEffect, useState } from "react";
 
-function Content() {
-  return (
-    <>
+function Content({ activeItem }) {
+  // Define state to hold the active item
+  const [active, setActive] = useState(activeItem);
+
+  // Load the active item from local storage when component mounts
+  useEffect(() => {
+    const storedItem = localStorage.getItem("activeItem");
+    if (storedItem) {
+      setActive(storedItem);
+    }
+  }, []);
+
+  // Determine content based on the active item
+  let content;
+  if (active === "home") {
+    content = (
       <div className="cover-container">
         <img
           className="cover-image"
@@ -26,8 +39,16 @@ function Content() {
           </button>
         </div>
       </div>
-    </>
-  );
+    );
+  } else if (active === "aboutus") {
+    content = <p>This is the About component.</p>;
+  } else if (active === "contactus") {
+    content = <p>This is the Contact component.</p>;
+  } else {
+    content = <p>No component selected.</p>;
+  }
+
+  return <>{content}</>;
 }
 
 export default Content;
