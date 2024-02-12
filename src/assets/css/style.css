@@ -17,7 +17,7 @@ font-family: Arial, sans-serif; /* Adjust font family as needed */
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(0.4);
+  filter: brightness(0.6);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -47,30 +47,38 @@ font-family: Arial, sans-serif; /* Adjust font family as needed */
 .navbar ul {
   list-style-type: none;
   text-align: center;
+  
 }
 
 .navbar ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .navbar ul li {
-  color: #fff;
+  color: #0a0a0a;
   text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 4px 6px;
+  border-radius: 8px;
   transition: background-color 0.3s; /* Smooth color transition */
+}
+.navbar ul li.nav-item.nav-link{
+  color: #ffffff;
+  
 }
 .navbar ul li .active {
  text-decoration: underline;
-  text-decoration-color: rgb(102, 228, 6);
+  text-decoration-color: rgba(51, 124, 9, 0.2);
+  text-decoration-thickness: 6px;
 }
 /* Change link color on hover */
 .navbar ul li a:hover {
-  background-color: rgba(234, 238, 232, 0.2); /* Semi-transparent white */
+  background-color: rgba(7, 7, 7, 0.2); /* Semi-transparent white */
+  text-decoration-color: rgba(10, 10, 10, 0.2);
   text-decoration: underline;
-  text-decoration-color: rgb(102, 228, 6);
-  ;
+  text-decoration-thickness: 6;
+  
+
 }
 
 
@@ -79,14 +87,14 @@ font-family: Arial, sans-serif; /* Adjust font family as needed */
   .navbar ul li {
   display: inline-block;
   margin: 0px;
-  align-self:self-end;
+  
 }
 
 .navbar ul li {
   color: #fff;
   text-decoration: none;
   padding: 2px;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background-color 0.3s; /* Smooth color transition */
   
 }

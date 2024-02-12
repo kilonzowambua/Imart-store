@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import Content from "./components/Content";
-import Menubar from "./components/Menubar";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Products from "./components/pages/Products";
+import Nopage from "./components/pages/Nopage.tsx";
 
 function App() {
-   const [activeItem, setActiveItem] = useState(() => {
-     const storedItem = localStorage.getItem("activeItem");
-     return storedItem || "home"; // Default active item is 'home'
-   });
-
-   const handleItemClick = (itemName) => {
-     setActiveItem(itemName);
-     localStorage.setItem("activeItem", itemName); // Update local storage
-   };
-
   return (
-    <>
-      <Menubar activeItem={activeItem} setActiveItem={setActiveItem} />
-      <Content activeItem={activeItem} />
-    </>
+<BrowserRouter>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/our-products" Component={Products} />
+        <Route path="/about" Component={About} />
+        <Route path="/contact" Component={Contact} />
+        <Route path="*" Component={Nopage} />
+      </Routes>
+      </BrowserRouter>
+ 
   );
 }
 
