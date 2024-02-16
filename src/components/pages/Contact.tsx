@@ -26,7 +26,7 @@ function Contact() {
                 <iframe
                   style={{ height: "100%", width: "100%", border: "0" }}
                   frameBorder="0"
-                  src="https://www.google.com/maps/embed/v1/place?q=Machakos+County,+Kenya&key=AIzaSyApdNE7oaeyB7Uyi_37f2tnsKOmC_qADes"
+                  src="https://www.google.com/maps/embed/v1/place?q=Machakos+County,+Kenya&key="
                 ></iframe>
               </div>
               <a
