@@ -33,9 +33,7 @@ function Contact() {
                 className="our-googlemap-code"
                 href="https://www.bootstrapskins.com/themes"
                 id="authorize-map-data"
-              >
-                premium bootstrap themes
-              </a>
+              ></a>
               <style>
                 {`
           #embed-map-canvas img.text-marker {
@@ -72,11 +70,7 @@ function Contact() {
                 ></textarea>
                 <label htmlFor="floatingPassword">Enter Message</label>
               </div>
-              <div className="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me" /> Remember me
-                </label>
-              </div>
+
               <button className="w-100 btn btn-lg btn-primary" type="submit">
                 Submit
               </button>
